@@ -286,7 +286,6 @@ public class TooltipChanger {
                 case NbtElement.LONG_TYPE -> append(((NbtLong) element).longValue());
                 case NbtElement.FLOAT_TYPE -> append(((NbtFloat) element).floatValue());
                 case NbtElement.DOUBLE_TYPE -> append(((NbtDouble) element).doubleValue());
-//                case NbtElement.NUMBER_TYPE -> appendNumber(((AbstractNbtNumber) element).numberValue().toString());  // REMOVED IN 1.21.5
                 case NbtElement.STRING_TYPE -> appendString(textPaths.contains(stack)
                         ? element.asString().get().replaceAll("(?<=[,{])\"(?:bold|italic|underlined|strikethrough|obfuscated)\":false,", "").replaceAll(",\"underlined\":false(?=})", "")
                         : element.asString().get());

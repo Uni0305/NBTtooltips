@@ -14,7 +14,7 @@ public class NBTtooltipsMod implements ModInitializer {
 	public static final MinecraftClient client = MinecraftClient.getInstance();
 	public static final String MOD_ID = "NBTtooltips";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final KeyBinding KEYBIND = KeyBindingHelper.registerKeyBinding(new KeyBinding("nbttooltips.keybind", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT_ALT, KeyBinding.INVENTORY_CATEGORY));
+	public static final KeyBinding KEYBIND = KeyBindingHelper.registerKeyBinding(new KeyBinding("nbttooltips.keybind", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT_ALT, KeyBinding.Category.INVENTORY));
 
 	@Override
 	public void onInitialize() {

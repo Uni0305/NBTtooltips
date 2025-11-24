@@ -30,7 +30,7 @@ public abstract class mision_thi_TooltipChanger {
 	@Redirect(method = "getTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/tooltip/TooltipType;isCreative()Z"))
 	protected boolean forceVisible(TooltipType instance) {
 		int code = InputUtil.fromTranslationKey(NBTtooltipsMod.KEYBIND.getBoundKeyTranslationKey()).getCode();
-		shouldShow = instance.isAdvanced() && InputUtil.isKeyPressed(client.getWindow().getHandle(), code);
+		shouldShow = instance.isAdvanced() && InputUtil.isKeyPressed(client.getWindow(), code);
 		return shouldShow || instance.isCreative();
 	}
 
